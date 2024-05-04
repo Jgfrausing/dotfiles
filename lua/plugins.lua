@@ -12,7 +12,7 @@ return {
   --    require('Comment').setup({})
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  --{ 'numToStr/Comment.nvim', opts = {} },
  {
     'preservim/nerdcommenter',
     config = function()
@@ -63,11 +63,11 @@ return {
             end,
         })
 
-        function _lazygit_toggle()
+        function LazyGit()
             lazygit:toggle()
         end
 
-        vim.api.nvim_set_keymap("n", "<leader>1", "<Cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap("n", "<leader>1", "<Cmd>lua LazyGit()<CR>", { noremap = true, silent = true })
     end
 },
 
