@@ -71,6 +71,15 @@ return {
     end
 },
 
+{
+    'rmagatti/auto-session',
+    config = function()
+        require("auto-session").setup {
+            log_level = 'error',
+            auto_session_suppress_dirs = {'~/'}
+        }
+    end
+},
  
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
